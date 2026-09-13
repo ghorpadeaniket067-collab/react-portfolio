@@ -1,0 +1,254 @@
+.project-card {
+  isolation: isolate;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 0 0 20px 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-blue::after {
+  background: linear-gradient(90deg, #1677ff, #38bdf8);
+}
+
+.project-purple::after {
+  background: linear-gradient(90deg, #6d3df0, #c084fc);
+}
+
+.project-orange::after {
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+}
+
+.project-preview {
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover .project-preview {
+  transform: translateY(-2px);
+}
+
+.project-preview img {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-preview img {
+  transform: scale(1.02);
+}
+
+.project-technologies span {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-technologies span:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(15, 23, 42, 0.08);
+}
+
+.github-button,
+.live-button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.github-button:hover,
+.live-button:hover {
+  transform: translateY(-2px);
+}
+
+.project-blue .live-button:hover {
+  box-shadow: 0 10px 24px rgba(22, 119, 255, 0.28);
+}
+
+.project-purple .live-button:hover {
+  box-shadow: 0 10px 24px rgba(109, 61, 240, 0.28);
+}
+
+.project-orange .live-button:hover {
+  box-shadow: 0 10px 24px rgba(249, 115, 22, 0.28);
+}
+
+.project-code-window {
+  animation: projectFloat 4s ease-in-out infinite;
+}
+
+.project-visual-tags span {
+  animation: projectTagFloat 3s ease-in-out infinite;
+}
+
+.project-visual-tags span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.project-visual-tags span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.project-visual-tags span:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+@keyframes projectFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(-4deg) translateY(-6px);
+  }
+}
+
+@keyframes projectTagFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .project-card {
+    min-height: 470px;
+  }
+
+  .project-preview {
+    height: 180px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+  }
+
+  .project-preview {
+    width: calc(100% - 32px);
+    height: 200px;
+  }
+
+  .project-card-content h2 {
+    font-size: 22px;
+  }
+
+  .project-card-content h3 {
+    font-size: 13px;
+  }
+
+  .project-card-content p {
+    min-height: auto;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+
+  .github-button,
+  .live-button,
+  .project-coming-soon {
+    min-height: 40px;
+  }
+
+  .project-code-window,
+  .project-visual-tags span {
+    animation: none;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+  .projects-page {
+    width: calc(100% - 24px);
+    padding-top: 145px;
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px;
+  }
+
+  .project-card-top {
+    padding: 17px 16px 12px;
+  }
+
+  .project-preview {
+    width: calc(100% - 24px);
+    height: 170px;
+    margin: 0 12px;
+    border-radius: 12px;
+  }
+
+  .project-card-content {
+    padding: 17px 16px 20px;
+  }
+
+  .project-card-content h2 {
+    font-size: 21px;
+  }
+
+  .project-technologies {
+    gap: 6px;
+  }
+
+  .project-technologies span {
+    font-size: 9px;
+    padding: 6px 8px;
+  }
+
+  .project-links {
+    gap: 8px;
+  }
+
+  .github-button,
+  .live-button {
+    padding: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-preview,
+  .project-preview img,
+  .github-button,
+  .live-button,
+  .project-technologies span,
+  .project-code-window,
+  .project-visual-tags span {
+    animation: none;
+    transition: none;
+  }
+}

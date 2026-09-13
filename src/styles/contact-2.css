@@ -1,0 +1,168 @@
+/* =========================================
+   CONTACT - FINISHING EFFECTS
+========================================= */
+
+.contact-info-card,
+.contact-form-card,
+.contact-bottom {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-info-card:hover,
+.contact-form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(47, 91, 160, 0.11);
+}
+
+/* HERO VISUAL */
+
+.connect-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connect-card:hover {
+  transform: rotate(-4deg) translateY(-4px);
+  box-shadow: 0 22px 40px rgba(44, 88, 155, 0.17);
+}
+
+.contact-opportunity {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-opportunity:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 14px 28px rgba(45, 90, 150, 0.14);
+}
+
+.contact-paper-plane {
+  animation: planeFloat 3s ease-in-out infinite;
+}
+
+/* CONTACT DETAILS */
+
+.contact-detail {
+  transition: transform 0.2s ease;
+}
+
+.contact-detail:hover {
+  transform: translateX(4px);
+}
+
+.contact-detail-icon {
+  transition: transform 0.2s ease;
+}
+
+.contact-detail:hover .contact-detail-icon {
+  transform: scale(1.06);
+}
+
+/* SOCIAL BUTTONS */
+
+.github-contact,
+.linkedin-contact {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.github-contact:hover {
+  box-shadow: 0 9px 20px rgba(32, 36, 44, 0.2);
+}
+
+.linkedin-contact:hover {
+  box-shadow: 0 9px 20px rgba(20, 119, 223, 0.22);
+}
+
+/* FORM */
+
+.contact-form-group input,
+.contact-form-group textarea {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-form-group input:hover,
+.contact-form-group textarea:hover {
+  border-color: #b9cceb;
+  background: #fff;
+}
+
+.contact-submit {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
+/* BOTTOM HIGHLIGHTS */
+
+.contact-highlight {
+  transition: transform 0.2s ease;
+}
+
+.contact-highlight:hover {
+  transform: translateY(-2px);
+}
+
+.highlight-icon {
+  transition: transform 0.2s ease;
+}
+
+.contact-highlight:hover .highlight-icon {
+  transform: scale(1.05);
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes planeFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-18deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(-14deg);
+  }
+}
+
+/* ACCESSIBILITY */
+
+.contact-social-buttons a:focus-visible,
+.contact-submit:focus-visible,
+.contact-detail a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-info-card,
+  .contact-form-card,
+  .contact-bottom,
+  .connect-card,
+  .contact-opportunity,
+  .contact-detail,
+  .contact-detail-icon,
+  .contact-social-buttons a,
+  .contact-submit,
+  .contact-highlight,
+  .highlight-icon {
+    transition: none;
+  }
+
+  .contact-paper-plane {
+    animation: none;
+  }
+}

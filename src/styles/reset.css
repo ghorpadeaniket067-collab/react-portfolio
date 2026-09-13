@@ -1,0 +1,81 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.7;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+}
+
+button {
+  border: 0;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background: rgba(168, 85, 247, 0.35);
+
+  color: #ffffff;
+}

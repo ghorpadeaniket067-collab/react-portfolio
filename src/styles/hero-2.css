@@ -1,0 +1,389 @@
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image-container {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   CIRCULAR PHOTO
+========================= */
+
+.hero-circle {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(96, 165, 250, 0.17),
+      rgba(219, 234, 254, 0.3) 55%,
+      transparent 72%
+    );
+  box-shadow:
+    0 30px 80px rgba(37, 99, 235, 0.1);
+}
+
+/* Blue rings */
+
+.hero-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 470px;
+  height: 470px;
+  border: 1px dashed rgba(37, 99, 235, 0.2);
+  transform: rotate(-12deg);
+}
+
+.orbit-two {
+  width: 395px;
+  height: 395px;
+  border: 2px solid rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.hero-image {
+  position: relative;
+  z-index: 3;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background: #dbeafe;
+  box-shadow:
+    0 0 0 7px rgba(37, 99, 235, 0.85),
+    0 0 0 15px rgba(96, 165, 250, 0.12),
+    0 28px 70px rgba(15, 23, 42, 0.18);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================
+   ORBIT DOTS
+========================= */
+
+.orbit-dot {
+  position: absolute;
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #1769ff;
+  box-shadow:
+    0 0 0 5px rgba(37, 99, 235, 0.12);
+}
+
+.dot-one {
+  top: 105px;
+  left: 105px;
+}
+
+.dot-two {
+  right: 75px;
+  bottom: 130px;
+}
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+  position: absolute;
+  z-index: 5;
+  min-width: 205px;
+  padding: 15px 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+  animation: floatingCard 4s ease-in-out infinite;
+}
+
+.card-one {
+  top: 155px;
+  left: 10px;
+}
+
+.card-two {
+  right: 0;
+  bottom: 155px;
+  animation-delay: 1.2s;
+}
+
+.floating-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #e5f0ff;
+  color: #1769ff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.floating-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-card strong {
+  margin-bottom: 3px;
+  color: #111b35;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+}
+
+.floating-card span {
+  color: #64748b;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.hero-note {
+  position: absolute;
+  z-index: 4;
+  top: 75px;
+  right: 15px;
+  color: #21385f;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.55;
+  transform: rotate(-5deg);
+}
+
+.hero-note span {
+  display: block;
+  margin-bottom: 4px;
+  color: #1769ff;
+  font-size: 19px;
+}
+
+/* =========================
+   DECORATIVE DOTS
+========================= */
+
+.hero-dots {
+  position: absolute;
+  right: 20px;
+  bottom: 130px;
+  width: 70px;
+  height: 55px;
+  background-image:
+    radial-gradient(
+      #93c5fd 1.5px,
+      transparent 1.5px
+    );
+  background-size: 12px 12px;
+  opacity: 0.55;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes floatingCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .hero-image-container {
+    min-height: 500px;
+  }
+
+  .hero-circle {
+    width: 390px;
+    height: 390px;
+  }
+
+  .orbit-one {
+    width: 425px;
+    height: 425px;
+  }
+
+  .orbit-two {
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero-image {
+    width: 290px;
+    height: 290px;
+  }
+
+  .card-one {
+    left: 0;
+  }
+
+  .card-two {
+    right: 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .hero-image-container {
+    min-height: 440px;
+    margin-top: 20px;
+  }
+
+  .hero-circle {
+    width: 330px;
+    height: 330px;
+  }
+
+  .orbit-one {
+    width: 360px;
+    height: 360px;
+  }
+
+  .orbit-two {
+    width: 305px;
+    height: 305px;
+  }
+
+  .hero-image {
+    width: 255px;
+    height: 255px;
+  }
+
+  .card-one {
+    top: 70px;
+    left: 0;
+  }
+
+  .card-two {
+    right: 0;
+    bottom: 65px;
+  }
+
+  .hero-note {
+    top: 20px;
+    right: 10px;
+  }
+
+  .hero-dots {
+    right: 0;
+    bottom: 45px;
+  }
+
+  .dot-one {
+    top: 55px;
+    left: 70px;
+  }
+
+  .dot-two {
+    right: 50px;
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image-container {
+    min-height: 390px;
+  }
+
+  .hero-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .orbit-one {
+    width: 305px;
+    height: 305px;
+  }
+
+  .orbit-two {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-image {
+    width: 215px;
+    height: 215px;
+  }
+
+  .floating-card {
+    min-width: 145px;
+    padding: 10px;
+  }
+
+  .floating-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .floating-card strong {
+    font-size: 10px;
+  }
+
+  .floating-card span {
+    font-size: 8px;
+  }
+
+  .card-one {
+    left: -5px;
+    top: 55px;
+  }
+
+  .card-two {
+    right: -5px;
+    bottom: 50px;
+  }
+
+  .hero-note {
+    display: none;
+  }
+
+  .hero-dots {
+    display: none;
+  }
+}

@@ -1,0 +1,205 @@
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.mobile-nav {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 14px;
+  right: 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.12);
+
+  backdrop-filter: blur(14px);
+
+  animation: mobileMenuOpen 0.2s ease;
+}
+
+.mobile-nav a {
+  display: flex;
+  align-items: center;
+
+  min-height: 46px;
+
+  padding: 0 15px;
+
+  border-radius: 10px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.mobile-nav a:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+.mobile-nav a.active {
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+@keyframes mobileMenuOpen {
+  from {
+    opacity: 0;
+
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE HERO
+========================= */
+
+@media (max-width: 700px) {
+  .hero {
+    width: min(var(--max-width), calc(100% - 30px));
+
+    min-height: auto;
+
+    padding: 65px 0 75px;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    margin-bottom: 20px;
+  }
+
+  .hero-small-title {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 13vw, 64px);
+
+    letter-spacing: -3px;
+  }
+
+  .hero h1 span {
+    margin-left: 7px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    max-width: 520px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .hero {
+    width: calc(100% - 28px);
+
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero-description {
+    font-size: 12.5px;
+
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: min(100%, 300px);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .hero-social {
+    gap: 18px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .projects-page .projects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  .projects-page .project-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .experience-page {
+    padding-top: 150px !important;
+  }
+}
